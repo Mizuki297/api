@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 04, 2019 at 02:39 PM
+-- Generation Time: Aug 26, 2019 at 12:43 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `data_cat` (
   `cat_id` varchar(4) COLLATE utf8_unicode_ci NOT NULL,
+  `url_cat` text COLLATE utf8_unicode_ci NOT NULL,
   `user_id` varchar(4) COLLATE utf8_unicode_ci NOT NULL,
   `blood_type` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
   `cat_type` text COLLATE utf8_unicode_ci NOT NULL,
@@ -44,8 +45,8 @@ CREATE TABLE `data_cat` (
 -- Dumping data for table `data_cat`
 --
 
-INSERT INTO `data_cat` (`cat_id`, `user_id`, `blood_type`, `cat_type`, `cat_weight`, `cat_bd`, `health_check_date`, `latest_donation`, `status_cat`) VALUES
-('0001', '0001', 'O', 'thai', 3, 1998, '2019-08-01', '2019-06-01', '0');
+INSERT INTO `data_cat` (`cat_id`, `url_cat`, `user_id`, `blood_type`, `cat_type`, `cat_weight`, `cat_bd`, `health_check_date`, `latest_donation`, `status_cat`) VALUES
+('0001', '', '0001', 'O', 'thai', 3, 1998, '2019-08-01', '2019-06-01', '0');
 
 -- --------------------------------------------------------
 
@@ -58,6 +59,14 @@ CREATE TABLE `hpt_pet` (
   `HPT_name` text COLLATE utf8_unicode_ci NOT NULL,
   `HPT_location` text COLLATE utf8_unicode_ci NOT NULL COMMENT 'จังหวัด'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `hpt_pet`
+--
+
+INSERT INTO `hpt_pet` (`HPT_id`, `HPT_name`, `HPT_location`) VALUES
+('0001', 'โรงพยาบาลสัตว์ธัญญมิตร', 'ปทุมธานี'),
+('0002', 'โรงพยาบาลสัตว์บ้านฟ้า', 'ปทุมธานี');
 
 -- --------------------------------------------------------
 
