@@ -1,8 +1,8 @@
 <?php
 $Host = "localhost";
-$User = "root";
-$Pass = "";
-$DB = "donor_app";
+$User = "id10688033_mizuki297";
+$Pass = "s1234567890";
+$DB = "id10688033_donor";
 
 $conn = new mysqli($Host,$User,$Pass,$DB);
 mysqli_set_charset($conn,'utf8_unicode_ci');
