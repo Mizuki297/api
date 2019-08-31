@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 30, 2019 at 12:46 PM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.3
+-- Host: localhost:3306
+-- Generation Time: Aug 31, 2019 at 08:05 AM
+-- Server version: 10.3.16-MariaDB
+-- PHP Version: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `donor_app`
+-- Database: `id10688033_donor`
 --
 
 -- --------------------------------------------------------
@@ -32,9 +32,16 @@ CREATE TABLE `request` (
   `request_id` int(4) NOT NULL,
   `blood_type` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
   `date_request` date NOT NULL,
-  `HPT_id` varchar(4) COLLATE utf8_unicode_ci NOT NULL,
-  `user_id` varchar(4) COLLATE utf8_unicode_ci NOT NULL
+  `HPT_id` int(4) NOT NULL,
+  `user_id` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `request`
+--
+
+INSERT INTO `request` (`request_id`, `blood_type`, `date_request`, `HPT_id`, `user_id`) VALUES
+(1, 'O', '2019-08-31', 1, 1);
 
 --
 -- Indexes for dumped tables

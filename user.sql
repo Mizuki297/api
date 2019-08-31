@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 30, 2019 at 12:47 PM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.3
+-- Host: localhost:3306
+-- Generation Time: Aug 31, 2019 at 08:05 AM
+-- Server version: 10.3.16-MariaDB
+-- PHP Version: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `donor_app`
+-- Database: `id10688033_donor`
 --
 
 -- --------------------------------------------------------
@@ -36,7 +36,7 @@ CREATE TABLE `user` (
   `user_username` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `user_password` int(10) NOT NULL,
   `user_line_id` text COLLATE utf8_unicode_ci NOT NULL,
-  `HPT_id` varchar(4) COLLATE utf8_unicode_ci NOT NULL,
+  `HPT_id` int(4) NOT NULL,
   `money_coin` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -45,7 +45,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `user_name`, `user_s_name`, `user_tel`, `user_username`, `user_password`, `user_line_id`, `HPT_id`, `money_coin`) VALUES
-(1, 'boy', 'za', '1234567890', 'admin', 1234567890, 'boyza', '0001', 0);
+(1, 'boy', 'za', '1234567890', 'admin', 1234567890, 'boyza', 1, 0);
 
 --
 -- Indexes for dumped tables
