@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 28, 2019 at 06:35 AM
+-- Generation Time: Aug 30, 2019 at 12:46 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `hpt_pet` (
-  `HPT_id` varchar(4) COLLATE utf8_unicode_ci NOT NULL,
+  `HPT_id` int(4) NOT NULL,
   `HPT_name` text COLLATE utf8_unicode_ci NOT NULL,
   `HPT_location` text COLLATE utf8_unicode_ci NOT NULL COMMENT 'จังหวัด'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -39,8 +39,8 @@ CREATE TABLE `hpt_pet` (
 --
 
 INSERT INTO `hpt_pet` (`HPT_id`, `HPT_name`, `HPT_location`) VALUES
-('0001', 'โรงพยาบาลสัตว์ธัญญมิตร', 'ปทุมธานี'),
-('0002', 'โรงพยาบาลสัตว์บ้านฟ้า', 'ปทุมธานี');
+(1, 'โรงพยาบาลสัตว์ธัญญมิตร', 'ปทุมธานี'),
+(2, 'โรงพยาบาลสัตว์บ้านฟ้า', 'ปทุมธานี');
 
 --
 -- Indexes for dumped tables

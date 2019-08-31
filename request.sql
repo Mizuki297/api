@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 28, 2019 at 06:40 AM
+-- Generation Time: Aug 30, 2019 at 12:46 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `request` (
-  `request_id` varchar(4) COLLATE utf8_unicode_ci NOT NULL,
+  `request_id` int(4) NOT NULL,
   `blood_type` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
   `date_request` date NOT NULL,
   `HPT_id` varchar(4) COLLATE utf8_unicode_ci NOT NULL,

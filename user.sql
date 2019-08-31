@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 28, 2019 at 06:40 AM
+-- Generation Time: Aug 30, 2019 at 12:47 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `user` (
-  `user_id` varchar(4) COLLATE utf8_unicode_ci NOT NULL,
+  `user_id` int(4) NOT NULL,
   `user_name` text COLLATE utf8_unicode_ci NOT NULL,
   `user_s_name` text COLLATE utf8_unicode_ci NOT NULL,
   `user_tel` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `user_name`, `user_s_name`, `user_tel`, `user_username`, `user_password`, `user_line_id`, `HPT_id`, `money_coin`) VALUES
-('0001', 'boy', 'za', '1234567890', 'admin', 1234567890, 'boyza', '0001', 0);
+(1, 'boy', 'za', '1234567890', 'admin', 1234567890, 'boyza', '0001', 0);
 
 --
 -- Indexes for dumped tables
