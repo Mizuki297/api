@@ -10,9 +10,8 @@ $user_id = $_POST['user_id'];
 //yyyy-mm-dd
 $date = date('y/m/d',time());
 
-$get_id = $conn->query("select max(request_id) from request;");
-$got = $get_id->fetch_assoc();
-$next_id = $got['MAX(request_id)'] + 1;
+$get_id = $conn->query("select max(request_id)+1 from request;");
+$next_id = $get_id->fetch_assoc();
 
 $get_hpt_id = $conn->query("select HPT_id from hpt_pet where HPT_name = '$HPT_name';");
 
@@ -30,14 +29,17 @@ values ('$next_id', '$Blood_type','$date' ,'$get_hpt_id', '$user_id');";
 // and HPT_id = (select HTP_id
 // from htp_pet where HPT_name = '$HPT_name' );";
 
-$result = $conn->query($sql);
 
-if($result->num_rows==1){
-    echo '1';
-
-}else{
-    echo '0';
-}
+if($result = $conn->query($sql)){
+ 
+    echo 'Data Submit Successfully';
+    
+    }
+    else{
+    
+    echo 'Try Again';
+    
+    }
 $conn->close();
 
 ?>
