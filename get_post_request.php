@@ -14,7 +14,7 @@ values (NULL,'$Blood_type', $get_hpt_id, $user_id);";
 
 if($result = $conn->query($sql)){
  
-    echo 'Data Submit Successfully';
+    return http_response_code(200);
     
     }
     else{
