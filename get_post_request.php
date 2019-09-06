@@ -2,7 +2,7 @@
 require 'ConnectDB.php';
 
 $HPT_name = $_POST['HPT_name'];
-$Blood_type = $_POST['Blood_type'];
+$Blood_type = $_POST['blood_type'];
 
 $user_id = $_POST['user_id'];
 

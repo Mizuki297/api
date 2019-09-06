@@ -1,6 +1,10 @@
 <?php
 require 'ConnectDB.php';
-$sql = "select * from user;";
+
+// $user_id = $_POST['user_id'];
+
+$sql = "select * from user
+where user_id = 1;";
 $result = $conn->query($sql);
 
 if($result->num_rows >= 1){
