@@ -2,9 +2,13 @@
 require 'ConnectDB.php';
 
 $user_id = $_POST['user_id'];
-$user_Money_coin = $_POST['user_Money_coin'];
 
-$sql = "";
+$money_coin = $conn->query("select money_coin from user where user_id = '$user_id';")
+->fetch_object()->money_coin;
+
+$money_coin = $money_coin - 10;
+
+$sql = "update user set money_coin = '$money_coin' where user.user_id = '$user_id'";
 
 if($result = $conn->query($sql)){
  
