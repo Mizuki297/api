@@ -5,7 +5,7 @@ require 'ConnectDB.php';
 // $cat_id = $_POST["cat_id"];
 
 $sql = "select url_cat, user_id, blood_type, cat_type, cat_weight, 
-cat_bd, health_check_date, latest_donation, user_line_id from data_cat 
+cat_bd, health_check_date, latest_donation, user_line_id, user_tel from data_cat 
 join user on data_cat.user_id = user.user_id
  where user_id = 1 and 
 cat_id = 1;";

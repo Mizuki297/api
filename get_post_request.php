@@ -21,7 +21,6 @@ if($result = $conn->query($sql)){
     
     echo 'Try Again';
     
-    
     }
 $conn->close();
 
