@@ -9,13 +9,13 @@ and user_password = '$password';";
 $result = $conn->query($sql);
 
 if($result->num_rows==1){
-    echo json_encode(1);
+    // echo json_encode(1);
     while($row = $result->fetch_assoc()){
         $output[] = $row;
     }echo json_encode($output);
 
 }else{
-    echo json_encode(0);
+    echo json_encode($output);
 }
 $conn->close();
 
