@@ -1,6 +1,6 @@
 <?php
 require 'ConnectDB.php';
-
+// ไม่ใช้
 $HPT_name = $_POST['HPT_name'];
 $Blood_type = $_POST['blood_type'];
 
