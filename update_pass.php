@@ -27,7 +27,7 @@ if($stmt = $conn->prepare($query)){
             $response["description"] = "Invalid old password combination";
         }
     }else{
-        $response["status"] = 2;
+        $response["status"] = 1;
         $response["description"] = "Invalid old password combination";
     }
 }

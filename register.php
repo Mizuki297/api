@@ -1,4 +1,5 @@
 <?php 
+$response = array();
 require 'ConnectDB.php';
 include 'functions.php';
  
@@ -21,6 +22,8 @@ $User_count =$conn->query("select count(user_id) as user from user where
 user_username = '$username';")->fetch_object();
 
 if($User_count->user ==1){
+    $response["status"] = 0;
+    $response["description"] = "Username is used แล้ว";
     echo json_encode([$User_count]);
     
 }else{
@@ -28,6 +31,8 @@ if($User_count->user ==1){
  user_password,salt, user_line_id, HPT_id, money_coin) 
 VALUES (NULL, '$user_name', '$user_s_name', '$tel', '$email',
  '$username', '$passwordHash', '$salt', '$user_line_id', '$get_hpt_id', '50');";
+ $response["status"] = 1;
+$response["description"] = "Register successful";
 
 if($result = $conn->query($sql)){
     echo json_encode($result);
