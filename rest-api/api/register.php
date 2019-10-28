@@ -24,7 +24,7 @@ user_username = '$username';")->fetch_object();
 if($User_count->user ==1){
     $response["status"] = 0;
     $response["description"] = "Username is used แล้ว";
-    echo json_encode([$User_count]);
+    echo json_encode($response);
     
 }else{
     $sql = "insert into user (user_id, user_name, user_s_name, user_tel, user_email, user_username,
@@ -32,10 +32,10 @@ if($User_count->user ==1){
 VALUES (NULL, '$user_name', '$user_s_name', '$tel', '$email',
  '$username', '$passwordHash', '$salt', '$user_line_id', '$get_hpt_id', '50');";
  $response["status"] = 1;
-$response["description"] = "Register successful";
+ $response["description"] = "Register successful";
 
 if($result = $conn->query($sql)){
-    echo json_encode($result);
+    echo json_encode($response);
 
 }else{
     echo json_encode(0);
