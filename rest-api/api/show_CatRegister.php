@@ -4,7 +4,7 @@ require 'ConnectDB.php';
 $user_id = $_POST['user_id'];
 
 $sql = "select * from data_cat 
-where user_id = '$user_id'; and status_cat != '2'";
+where user_id = '$user_id' and status_cat != '2';";
 
 $result = $conn->query($sql);
 
