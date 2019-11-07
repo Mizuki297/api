@@ -7,7 +7,9 @@ $cat_type = $_POST['cat_type'];
 $blood_type = $_POST['blood_type'];
 $cat_bd = $_POST['cat_bd'];
 $cat_weight = $_POST['cat_weight'];
+
 $health_check_date = $_POST['health_check_date'];
+
 $latest_donation = $_POST['latest_donation'];
 
 $user_id = $_POST['user_id'];

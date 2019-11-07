@@ -17,15 +17,15 @@ if($stmt = $conn->prepare($query)){
     if($stmt->fetch()){
         if(password_verify(concatPasswordWithSalt($password,$salt),$passwordHashDB)){
             $response["status"] = 0;
-            $response["description"] = "Login successful";
+            $response["description"] = "Login สำเร็จ";
             $response["user_id"] = $user_id;
         }else{
             $response["status"] = 1;
-            $response["description"] = "Invalid username and password combination";
+            $response["description"] = "username และ password ไม่ตรงกัน";
         }
     }else{
         $response["status"] = 1;
-        $response["description"] = "Invalid username and password combination";
+        $response["description"] = "username และ password ไม่ตรงกัน";
     }
     $stmt->close();
 }

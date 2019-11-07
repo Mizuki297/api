@@ -23,7 +23,7 @@ user_username = '$username';")->fetch_object();
 
 if($User_count->user ==1){
     $response["status"] = 0;
-    $response["description"] = "Username is used แล้ว";
+    $response["description"] = "Username นี้ถูกใช้แล้ว";
     echo json_encode($response);
     
 }else{
@@ -32,7 +32,7 @@ if($User_count->user ==1){
 VALUES (NULL, '$user_name', '$user_s_name', '$tel', '$email',
  '$username', '$passwordHash', '$salt', '$user_line_id', '$get_hpt_id', '50');";
  $response["status"] = 1;
- $response["description"] = "Register successful";
+ $response["description"] = "Register สำเร็จ";
 
 if($result = $conn->query($sql)){
     echo json_encode($response);
