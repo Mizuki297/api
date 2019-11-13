@@ -11,12 +11,6 @@ inner join user on data_cat.user_id = user.user_id
  where cat_id = '$cat_id';";
 
 $result = $conn->query($sql)->fetch_assoc();
-
-// if($result->num_rows >= 1){
-//     while($row = $result->fetch_assoc()){
-//         $output[] = $row;
-//     }
-// }
 echo json_encode($result,JSON_UNESCAPED_UNICODE);
 
 ?>
