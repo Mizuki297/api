@@ -3,7 +3,7 @@ require 'ConnectDB.php';
 
 $user_id = $_POST['user_id'];
 
-$sql = "select * from data_cat 
+$sql = "select cat_id, cat_name, url_cat, status_cat, Datediff(DATE_ADD(latest_donation,INTERVAL 3 MONTH), SYSDATE()) as countdown from data_cat 
 where user_id = '$user_id' and status_cat != '2';";
 
 $result = $conn->query($sql);
